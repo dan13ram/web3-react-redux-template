@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "simple template with react-redux & web3",
   "author": "dan13ram",
-  "license": "ISC",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "build": "rm -rf ./dist && webpack --config webpack.rinkeby.js",

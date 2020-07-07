@@ -31,6 +31,12 @@ Make sure metamask is connected to local network "localhost:8545"
 npm start
 ```
 
+## Run tests
+
+```
+truffle test
+```
+
 ## Build App
 
 ```
