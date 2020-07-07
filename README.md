@@ -1,5 +1,7 @@
-# Simple Greeter App template with web3 integration
+# Greeter dApp 
 
+simple template with basic greeter smart contract 
+and
 frontend built using react, redux, web3 & webpack
 
 ## Install Dependencies
