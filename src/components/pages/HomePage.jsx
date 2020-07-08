@@ -12,7 +12,6 @@ class HomePage extends React.Component {
     }
 
     async componentDidMount() {
-        await this.props.loadWeb3();
         await this.refresh();
     }
 
@@ -39,7 +38,6 @@ function mapState(state) {
 }
 
 const actionCreators = {
-    loadWeb3: web3Actions.loadWeb3,
     getGreeting: contractActions.getGreeting
 };
 

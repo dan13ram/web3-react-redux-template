@@ -21,8 +21,8 @@ function getGreeting() {
         dispatch(started());
         let greeting;
         try {
-            const { account, contract } = getState().web3;
-            greeting = await contractService.getGreeting(contract, account);
+            const { contract } = getState().web3;
+            greeting = await contractService.getGreeting(contract);
         } catch (e) {
             console.log(e);
             dispatch(failure(e));
@@ -40,12 +40,8 @@ function setGreeting(greeting) {
         dispatch(started());
         let data;
         try {
-            const { account, contract } = getState().web3;
-            data = await contractService.setGreeting(
-                contract,
-                account,
-                greeting
-            );
+            const { contract } = getState().web3;
+            data = await contractService.setGreeting(contract, greeting);
         } catch (e) {
             console.log(e);
             dispatch(failure(e));

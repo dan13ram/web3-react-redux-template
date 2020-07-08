@@ -5,14 +5,14 @@ export const contractService = {
     setGreeting
 };
 
-async function getGreeting(contract, account) {
-    return await contract.methods.get().call({ from: account });
+async function getGreeting(contract) {
+    return await contract.methods.get().call();
 }
 
-async function setGreeting(contract, account, greeting) {
+async function setGreeting(contract, greeting) {
     const receipt = await contract.methods
         .set(greeting)
-        .send({ from: account });
+        .send();
     if (!receipt.status) {
         logReceipt(receipt);
         return { error: "Transaction failed" };
